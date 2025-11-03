@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Seatwork 1</title>
+
+<!-- PyScript CDN -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<style>
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #e8f5e9; /* soft green background */
+    padding: 40px;
+}
+
+.container {
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px 35px;
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #2e7d32; /* dark green */
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #43a047;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+#average, #result, #gradeSummary {
+    font-weight: bold;
+}
+
+.result-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Student Grade Calculator</h2>
+
+    <label>First Name:</label>
+    <input id="firstName" type="text">
+
+    <label>Last Name:</label>
+    <input id="lastName" type="text">
+
+    <label>Science:</label>
+    <input id="score1" type="text">
+
+    <label>Math:</label>
+    <input id="score2" type="text">
+
+    <label>English:</label>
+    <input id="score3" type="text">
+
+    <label>Filipino:</label>
+    <input id="score4" type="text">
+
+    <label>ICT:</label>
+    <input id="score5" type="text">
+
+    <label>PE:</label>
+    <input id="score6" type="text">
+
+    <button py-click="compute_average">COMPUTE</button>
+
+    <div class="result-box">
+        <p>Average: <span id="average"></span></p>
+        <p>Pass or Fail?: <span id="result"></span></p>
+        <p id="gradeSummary"></p>
+    </div>
+</div>
+
+<script type="py" src="main.py"></script>
+</body>
+</html>
